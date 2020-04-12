@@ -18,11 +18,11 @@ This setup assume you have docker ready in your machine.
 
 1. Build docker image.
 
-   > $ docker build -t php-hello .
+   > $ docker build -t php-json .
    
 2. Run the docker image.
 
-   > $ docker run -dp 5000:80 php-hello
+   > $ docker run -dp 5000:80 php-json
    
 3. Open localhost port 5000 in your browser.
 
