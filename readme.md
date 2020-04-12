@@ -1,6 +1,6 @@
-# "Hello World" Docker > PHP
+# JSON Docker > PHP
 
-Simple and quick example running PHP with docker that display "Hello World" in your browser.
+Simple and quick example running PHP with docker that return JSON.
 
 ## Note
 
@@ -10,7 +10,7 @@ This setup assume you have docker ready in your machine.
 
 1. First clone this repository to your machine.
 
-   > $ git clone https://github.com/dhiyaulhaqq/docker-php-hello-world.git app
+   > $ git clone https://github.com/dhiyaulhaqq/php-json.git app
    >
    > $ cd app
    >
