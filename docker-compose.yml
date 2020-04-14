@@ -15,4 +15,4 @@ services:
     volumes:
       - './webapp:/app'
     depends_on:
-      - php
+      - phpapp
