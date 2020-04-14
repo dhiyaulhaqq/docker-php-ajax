@@ -1,13 +1,13 @@
 version: '2'
 
 services:
-  php:
+  phpapp:
     image: 'php:7.2-apache'
     ports:
       - '8080:80'
     volumes:
       - './phpapp:/var/www/html'
-  apache:
+  webapp:
     image: 'bitnami/apache:latest'
     ports:
       - '6080:8080'
