@@ -7,3 +7,10 @@ services:
       - '8080:80'
     volumes:
       - ./phpapp:/var/www/html
+  apache:
+    image: 'bitnami/apache:latest'
+    ports:
+      - '6080:8080'
+      - '4443:8443'
+    volumes:
+      - ./webapp:/app
