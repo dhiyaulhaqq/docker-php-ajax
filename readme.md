@@ -1,4 +1,4 @@
-# JSON Docker > PHP
+# Docker - PHP - AJAX
 
 Simple and quick example running PHP with docker that return JSON.
 
@@ -10,7 +10,7 @@ This setup assume you have docker ready in your machine.
 
 1. First clone this repository to your machine.
 
-   > $ git clone https://github.com/dhiyaulhaqq/php-json.git app
+   > $ git clone https://github.com/dhiyaulhaqq/docker-php-ajax.git app
    >
    > $ cd app
    >
