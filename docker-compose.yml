@@ -1,14 +1,16 @@
 version: '3'
 
 services:
-  phpapp:
+  php:
     image: 'php:7.2-apache'
+    container_name: phpapp
     ports:
       - '8080:80'
     volumes:
       - './phpapp:/var/www/html'
-  webapp:
+  web:
     image: 'bitnami/apache:latest'
+    container_name: webapp
     ports:
       - '6080:8080'
       - '4443:8443'
