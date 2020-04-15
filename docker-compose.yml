@@ -6,9 +6,7 @@ services:
     container_name: phpapp
     hostname: phpapp
     networks:
-      mynet:
-        aliases:
-          - phpnet
+      phpnet:
     ports:
       - '8080:80'
     volumes:
@@ -18,8 +16,8 @@ services:
     container_name: webapp
     hostname: webapp
     networks:
-      - mynet
       - phpnet
+      - webnet
     ports:
       - '6080:8080'
       - '4443:8443'
@@ -29,4 +27,5 @@ services:
       - php
     
 networks:
-  mynet:
+  phpnet:
+  webnet:
