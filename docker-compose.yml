@@ -5,7 +5,9 @@ services:
     image: 'php:7.2-apache'
     container_name: phpapp
     networks:
-      - mynet
+      mynet:
+        aliases:
+          - phpnet
     ports:
       - '8080:80'
     volumes:
