@@ -24,4 +24,4 @@ services:
       - php
     
   networks:
-    - mynet
+    mynet:
