@@ -4,6 +4,7 @@ services:
   php:
     image: 'php:7.2-apache'
     container_name: phpapp
+    hostname: phpapp
     networks:
       mynet:
         aliases:
@@ -15,8 +16,10 @@ services:
   web:
     image: 'bitnami/apache:latest'
     container_name: webapp
+    hostname: webapp
     networks:
       - mynet
+      - phpnet
     ports:
       - '6080:8080'
       - '4443:8443'
@@ -25,5 +28,5 @@ services:
     depends_on:
       - php
     
-  networks:
-    mynet:
+networks:
+  mynet:
