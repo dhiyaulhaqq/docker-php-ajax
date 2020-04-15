@@ -4,6 +4,7 @@ services:
   php:
     image: 'php:7.2-apache'
     container_name: phpapp
+    hostname: phpapp
     ports:
       - '8080:80'
     volumes:
@@ -11,6 +12,7 @@ services:
   web:
     image: 'bitnami/apache:latest'
     container_name: webapp
+    hostname: webapp
     ports:
       - '6080:8080'
       - '4443:8443'
