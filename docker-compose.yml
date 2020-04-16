@@ -11,21 +11,20 @@ services:
       - '8080:80'
     volumes:
       - './phpapp:/var/www/html'
-  web:
-    image: 'bitnami/apache:latest'
-    container_name: webapp
-    hostname: webapp
+  node:
+    build: ./nodeapp
+    container_name: nodeapp
+    hostname: nodeapp
     networks:
       - phpnet
-      - webnet
+      - nodenet
     ports:
-      - '6080:8080'
-      - '4443:8443'
+      - '3000:3000'
     volumes:
-      - './webapp:/app'
+      - './nodeapp:./'
     depends_on:
       - php
     
 networks:
   phpnet:
-  webnet:
+  nodenet:
