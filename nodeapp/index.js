@@ -21,3 +21,20 @@ server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 
 });
+
+var options = {
+  host: 'phpapp',
+  port: 80,
+  path: '/index.php'
+};
+
+http.get(options, function(res) {
+  console.log("Got response: " + res.statusCode);
+
+  res.on("data", function(chunk) {
+    console.log("BODY: " + chunk);
+    body = chunk;
+  });
+}).on('error', function(e) {
+  console.log("Got error: " + e.message);
+});
